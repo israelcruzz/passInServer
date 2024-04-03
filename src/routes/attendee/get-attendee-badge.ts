@@ -31,7 +31,18 @@ class GetAttendeeBadge {
       throw new Error("Attendee not found");
     }
 
-    return response.status(200).json({ attendee });
+    const baseUrl = `${request.protocol}://${request.hostname}:3030`
+
+    const checkInUrl = new URL(`/attendees/${attendeeId}/check-in`, baseUrl)
+
+    return response.status(200).json({
+      badge: {
+        name: attendee.name,
+        email: attendee.email,
+        eventTitle: attendee.event,
+        checkInUrl: checkInUrl.toString()
+      }
+    });
   }
 }
 
