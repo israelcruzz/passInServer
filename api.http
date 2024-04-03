@@ -1,0 +1,23 @@
+POST http://localhost:3030/events
+Content-Type: application/json
+
+{
+    "title": "Fullstack Event Two",
+    "details": "Event for devlopers seniors",
+    "maxAttendees": 10
+}
+
+###
+POST http://localhost:3030/events/bf031d5e-81aa-4684-863a-d96770214163/attendee
+Content-Type: application/json
+
+{
+    "name": "Israel Cruz",
+    "email": "israelcruz@net.dev"
+}
+
+###
+GET http://localhost:3030/events/0143e915-0593-4fec-b027-456ee441d3c9
+
+###
+GET http://localhost:3030/attendee/2/badge
