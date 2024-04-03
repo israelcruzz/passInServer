@@ -2,29 +2,29 @@ POST http://localhost:3030/events
 Content-Type: application/json
 
 {
-    "title": "Event Seniors Dev",
-    "details": "Event for devlopers seniors",
-    "maxAttendees": 10
+    "title": "Nlw Unite",
+    "details": "Event for devlopers",
+    "maxAttendees": 200
 }
 
 ###
-POST http://localhost:3030/events/6a9f8963-4a64-41bd-9fd7-e04fcacf98bc/attendee
+POST http://localhost:3030/events/36c82a78-32f6-4367-b84f-bef24db224f7/attendee
 Content-Type: application/json
 
 {
-    "name": "Niet",
-    "email": "niet@dev.net"
+    "name": "Miau Cruz",
+    "email": "miau@dev.net"
 }
 
 ###
-GET http://localhost:3030/events/6a9f8963-4a64-41bd-9fd7-e04fcacf98bc
+GET http://localhost:3030/events/36c82a78-32f6-4367-b84f-bef24db224f7
 
 ###
-GET http://localhost:3030/attendee/4/badge
+GET http://localhost:3030/attendee/10/badge
 
 ###
-GET http://localhost:3030/attendees/3/check-in
+GET http://localhost:3030/attendees/10/check-in
 
 ###
-GET http://localhost:3030/events/6a9f8963-4a64-41bd-9fd7-e04fcacf98bc/attendees
+GET http://localhost:3030/events/36c82a78-32f6-4367-b84f-bef24db224f7/attendees
 
